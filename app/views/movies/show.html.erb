@@ -1,0 +1,10 @@
+<%= @movie.title %>
+<%= @movie.cinema_name %>
+<%= @movie.viewer_name %>
+
+<% form_tag @movie, method: "DELETE" do %>
+  <%= submit_tag "Delete this Movie" %>
+<% end %>
+
+<%= link_to "All Movies", movies_path %>
+<%= link_to "Edit Movie", edit_movie_path(@movie) %>

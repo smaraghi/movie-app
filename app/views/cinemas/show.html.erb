@@ -1,0 +1,8 @@
+<h3>Cinema Name: <%= @cinema.name %></h3>
+
+<% form_tag @cinema, method: "DELETE" do %>
+  <%= submit_tag "Delete Cinema" %>
+<% end %>
+
+<%= link_to "All Cinemas", cinemas_path %>
+<%= link_to "Edit this Cinema", edit_cinema_path(@cinema)%>

@@ -1,0 +1,9 @@
+<h3>All Viewers</h3>
+<ul>
+  <% @viewers.each do |v| %>
+    <li><%= v.first_name + " " + v.last_name %></li>
+    <%= link_to "Show Viewer", v %>
+  <% end %>
+</ul>
+
+<%= link_to "Create Viewer", new_viewer_path %>

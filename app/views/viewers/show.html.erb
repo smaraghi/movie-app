@@ -1,0 +1,8 @@
+<%= @viewer.first_name + " " + @viewer.last_name %><br>
+
+<% form_tag @viewer, method: "DELETE" do %>
+  <%= submit_tag "Delete Viewer" %>
+<% end %>
+
+<%= link_to "All Viewers", viewers_path %>
+<%= link_to "Edit Viewer", edit_viewer_path(@viewer) %>
