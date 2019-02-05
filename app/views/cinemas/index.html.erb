@@ -1,7 +1,7 @@
 <h1>All Cinemas</h1>
 <ul>
   <% @cinemas.each do |c|  %>
-    <li>Name: <%=link_to c.name, cinemas_path(c) %></li>
+    <li>Name: <%=link_to c.name, cinema_path(c) %></li>
   <% end %>
 </ul>
 <hr>

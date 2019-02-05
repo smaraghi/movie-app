@@ -2,8 +2,8 @@
 <ul>
 <% @movies.each do |m| %>
     <h4>Title:</h4> <%= m.title %><br>
-    <h4>Cinema Name:</h4> <%= link_to m.cinema_name, cinemas_path(m.cinema_name) %><br>
-    <!--This link is trying to go to the cinema names show page but ends up with a ./id -->
+    <h4>Cinema Name:</h4> <%= link_to m.cinema_name, cinema_path(m.cinema.id) %><br>
+    <!--This link is trying to go to the cinema names show page but ends up with a . -->
     <h4>Viewer Name:</h4> <%= m.viewer_name %><br>
   <%= link_to "Edit Movie", edit_movie_path(m) %>
   <%= link_to "Show Movie", movies_path(m) %><hr>

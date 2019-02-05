@@ -2023,3 +2023,1228 @@ Processing by ViewersController#new as HTML
 Completed 200 OK in 55ms (Views: 50.6ms | ActiveRecord: 0.0ms)
 
 
+Started GET "/viewers/new" for 127.0.0.1 at 2019-02-04 08:47:50 -0500
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /usr/local/lib/ruby/gems/2.3.0/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+Processing by ViewersController#new as HTML
+  Rendering viewers/new.html.erb within layouts/application
+  Rendered viewers/_viewer_form.html.erb (19.1ms)
+  Rendered viewers/new.html.erb within layouts/application (23.8ms)
+Completed 200 OK in 414ms (Views: 372.8ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/cinemas/new" for 127.0.0.1 at 2019-02-04 08:48:08 -0500
+Processing by CinemasController#new as HTML
+  Rendering cinemas/new.html.erb within layouts/application
+  Rendered cinemas/_cinema_form.html.erb (5.2ms)
+  Rendered cinemas/new.html.erb within layouts/application (9.4ms)
+Completed 200 OK in 72ms (Views: 51.2ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/cinemas/1/edit" for 127.0.0.1 at 2019-02-04 08:48:18 -0500
+Processing by CinemasController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCinema Load (0.8ms)[0m  [1m[34mSELECT  "cinemas".* FROM "cinemas" WHERE "cinemas"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/cinemas_controller.rb:37
+  Rendering cinemas/edit.html.erb within layouts/application
+  Rendered cinemas/_cinema_form.html.erb (5.0ms)
+  Rendered cinemas/edit.html.erb within layouts/application (8.8ms)
+Completed 200 OK in 77ms (Views: 60.2ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/cinemas/new" for 127.0.0.1 at 2019-02-04 08:48:24 -0500
+Processing by CinemasController#new as HTML
+  Rendering cinemas/new.html.erb within layouts/application
+  Rendered cinemas/_cinema_form.html.erb (2.2ms)
+  Rendered cinemas/new.html.erb within layouts/application (6.2ms)
+Completed 200 OK in 88ms (Views: 84.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/cinemas" for 127.0.0.1 at 2019-02-04 08:48:33 -0500
+Processing by CinemasController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"wfha2eGEgWy5tI82c0hBoEXvhtdnhbfEwmZtlowNfk9FlCysKIQEtAZJInOhSbk2mSUCrgBi5vg88y5Pn73jsA==", "cinema"=>{"name"=>"flatiron"}, "commit"=>"Create Cinema"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/cinemas_controller.rb:17
+  [1m[36mCinema Create (1.5ms)[0m  [1m[32mINSERT INTO "cinemas" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "flatiron"], ["created_at", "2019-02-04 13:48:33.909948"], ["updated_at", "2019-02-04 13:48:33.909948"]]
+  ↳ app/controllers/cinemas_controller.rb:17
+  [1m[35m (1.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/cinemas_controller.rb:17
+Redirected to http://localhost:3000/cinemas/6
+Completed 302 Found in 12ms (ActiveRecord: 3.3ms)
+
+
+Started GET "/cinemas/6" for 127.0.0.1 at 2019-02-04 08:48:33 -0500
+Processing by CinemasController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mCinema Load (0.2ms)[0m  [1m[34mSELECT  "cinemas".* FROM "cinemas" WHERE "cinemas"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/cinemas_controller.rb:37
+  Rendering cinemas/show.html.erb within layouts/application
+  Rendered cinemas/show.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 53ms (Views: 47.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/cinemas" for 127.0.0.1 at 2019-02-04 08:48:35 -0500
+Processing by CinemasController#index as HTML
+  Rendering cinemas/index.html.erb within layouts/application
+  [1m[36mCinema Load (0.5ms)[0m  [1m[34mSELECT "cinemas".* FROM "cinemas"[0m
+  ↳ app/views/cinemas/index.html.erb:3
+  Rendered cinemas/index.html.erb within layouts/application (5.2ms)
+Completed 200 OK in 59ms (Views: 52.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/cinemas.2" for 127.0.0.1 at 2019-02-04 08:48:38 -0500
+Processing by CinemasController#index as 
+  Rendering cinemas/index.html.erb within layouts/application
+  [1m[36mCinema Load (0.4ms)[0m  [1m[34mSELECT "cinemas".* FROM "cinemas"[0m
+  ↳ app/views/cinemas/index.html.erb:3
+  Rendered cinemas/index.html.erb within layouts/application (3.8ms)
+Completed 200 OK in 121ms (Views: 85.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/cinemas/6" for 127.0.0.1 at 2019-02-04 09:39:29 -0500
+Processing by CinemasController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mCinema Load (0.3ms)[0m  [1m[34mSELECT  "cinemas".* FROM "cinemas" WHERE "cinemas"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/cinemas_controller.rb:37
+  Rendering cinemas/show.html.erb within layouts/application
+  Rendered cinemas/show.html.erb within layouts/application (5.1ms)
+Completed 200 OK in 103ms (Views: 83.9ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/cinemas" for 127.0.0.1 at 2019-02-04 09:39:31 -0500
+Processing by CinemasController#index as HTML
+  Rendering cinemas/index.html.erb within layouts/application
+  [1m[36mCinema Load (0.6ms)[0m  [1m[34mSELECT "cinemas".* FROM "cinemas"[0m
+  ↳ app/views/cinemas/index.html.erb:3
+  Rendered cinemas/index.html.erb within layouts/application (9.7ms)
+Completed 200 OK in 86ms (Views: 76.7ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/cinemas" for 127.0.0.1 at 2019-02-04 09:39:33 -0500
+Processing by CinemasController#index as HTML
+  Rendering cinemas/index.html.erb within layouts/application
+  [1m[36mCinema Load (0.3ms)[0m  [1m[34mSELECT "cinemas".* FROM "cinemas"[0m
+  ↳ app/views/cinemas/index.html.erb:3
+  Rendered cinemas/index.html.erb within layouts/application (4.9ms)
+Completed 200 OK in 61ms (Views: 56.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/cinemas.2" for 127.0.0.1 at 2019-02-04 09:39:34 -0500
+Processing by CinemasController#index as 
+  Rendering cinemas/index.html.erb within layouts/application
+  [1m[36mCinema Load (0.2ms)[0m  [1m[34mSELECT "cinemas".* FROM "cinemas"[0m
+  ↳ app/views/cinemas/index.html.erb:3
+  Rendered cinemas/index.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 97ms (Views: 61.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/cinemas" for 127.0.0.1 at 2019-02-04 09:41:33 -0500
+Processing by CinemasController#index as HTML
+  Rendering cinemas/index.html.erb within layouts/application
+  [1m[36mCinema Load (0.3ms)[0m  [1m[34mSELECT "cinemas".* FROM "cinemas"[0m
+  ↳ app/views/cinemas/index.html.erb:3
+  Rendered cinemas/index.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 54ms (Views: 50.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/cinemas.2" for 127.0.0.1 at 2019-02-04 09:41:34 -0500
+Processing by CinemasController#index as 
+  Rendering cinemas/index.html.erb within layouts/application
+  [1m[36mCinema Load (0.2ms)[0m  [1m[34mSELECT "cinemas".* FROM "cinemas"[0m
+  ↳ app/views/cinemas/index.html.erb:3
+  Rendered cinemas/index.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 102ms (Views: 67.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/cinemas.2" for 127.0.0.1 at 2019-02-04 09:42:32 -0500
+Processing by CinemasController#index as 
+  Rendering cinemas/index.html.erb within layouts/application
+  [1m[36mCinema Load (0.2ms)[0m  [1m[34mSELECT "cinemas".* FROM "cinemas"[0m
+  ↳ app/views/cinemas/index.html.erb:3
+  Rendered cinemas/index.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 102ms (Views: 64.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/cinemas.2" for 127.0.0.1 at 2019-02-04 09:46:26 -0500
+Processing by CinemasController#index as 
+  Rendering cinemas/index.html.erb within layouts/application
+  [1m[36mCinema Load (0.2ms)[0m  [1m[34mSELECT "cinemas".* FROM "cinemas"[0m
+  ↳ app/views/cinemas/index.html.erb:3
+  Rendered cinemas/index.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 105ms (Views: 67.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/cinemas" for 127.0.0.1 at 2019-02-04 09:46:31 -0500
+Processing by CinemasController#index as HTML
+  Rendering cinemas/index.html.erb within layouts/application
+  [1m[36mCinema Load (0.3ms)[0m  [1m[34mSELECT "cinemas".* FROM "cinemas"[0m
+  ↳ app/views/cinemas/index.html.erb:3
+  Rendered cinemas/index.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 56ms (Views: 51.2ms | ActiveRecord: 0.3ms)
+
+
+  [1m[36mMovie Load (0.4ms)[0m  [1m[34mSELECT  "movies".* FROM "movies" ORDER BY "movies"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mMovie Load (0.3ms)[0m  [1m[34mSELECT  "movies".* FROM "movies" ORDER BY "movies"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mCinema Load (0.3ms)[0m  [1m[34mSELECT  "cinemas".* FROM "cinemas" WHERE "cinemas"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mMovie Load (0.3ms)[0m  [1m[34mSELECT  "movies".* FROM "movies" ORDER BY "movies"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mCinema Load (0.2ms)[0m  [1m[34mSELECT  "cinemas".* FROM "cinemas" WHERE "cinemas"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+Started GET "/cinemas.2" for 127.0.0.1 at 2019-02-04 09:49:39 -0500
+Processing by CinemasController#index as 
+  Rendering cinemas/index.html.erb within layouts/application
+  [1m[36mCinema Load (0.3ms)[0m  [1m[34mSELECT "cinemas".* FROM "cinemas"[0m
+  ↳ app/views/cinemas/index.html.erb:3
+  Rendered cinemas/index.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 116ms (Views: 75.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/cinemas" for 127.0.0.1 at 2019-02-04 09:53:05 -0500
+Processing by CinemasController#index as HTML
+  Rendering cinemas/index.html.erb within layouts/application
+  [1m[36mCinema Load (0.3ms)[0m  [1m[34mSELECT "cinemas".* FROM "cinemas"[0m
+  ↳ app/views/cinemas/index.html.erb:3
+  Rendered cinemas/index.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 55ms (Views: 51.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/cinemas.2" for 127.0.0.1 at 2019-02-04 09:53:08 -0500
+Processing by CinemasController#index as 
+  Rendering cinemas/index.html.erb within layouts/application
+  [1m[36mCinema Load (0.2ms)[0m  [1m[34mSELECT "cinemas".* FROM "cinemas"[0m
+  ↳ app/views/cinemas/index.html.erb:3
+  Rendered cinemas/index.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 99ms (Views: 64.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/cinemas.2" for 127.0.0.1 at 2019-02-04 09:56:56 -0500
+Processing by CinemasController#index as 
+  Rendering cinemas/index.html.erb within layouts/application
+  [1m[36mCinema Load (0.2ms)[0m  [1m[34mSELECT "cinemas".* FROM "cinemas"[0m
+  ↳ app/views/cinemas/index.html.erb:3
+  Rendered cinemas/index.html.erb within layouts/application (12.7ms)
+Completed 200 OK in 103ms (Views: 67.5ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/cinemas.2" for 127.0.0.1 at 2019-02-04 09:57:29 -0500
+Processing by CinemasController#index as 
+  Rendering cinemas/index.html.erb within layouts/application
+  [1m[36mCinema Load (0.3ms)[0m  [1m[34mSELECT "cinemas".* FROM "cinemas"[0m
+  ↳ app/views/cinemas/index.html.erb:3
+  Rendered cinemas/index.html.erb within layouts/application (11.6ms)
+Completed 200 OK in 108ms (Views: 69.7ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/cinemas" for 127.0.0.1 at 2019-02-04 09:57:35 -0500
+Processing by CinemasController#index as HTML
+  Rendering cinemas/index.html.erb within layouts/application
+  [1m[36mCinema Load (0.6ms)[0m  [1m[34mSELECT "cinemas".* FROM "cinemas"[0m
+  ↳ app/views/cinemas/index.html.erb:3
+  Rendered cinemas/index.html.erb within layouts/application (4.2ms)
+Completed 200 OK in 68ms (Views: 62.1ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/cinemas" for 127.0.0.1 at 2019-02-04 09:57:58 -0500
+Processing by CinemasController#index as HTML
+  Rendering cinemas/index.html.erb within layouts/application
+  [1m[36mCinema Load (0.2ms)[0m  [1m[34mSELECT "cinemas".* FROM "cinemas"[0m
+  ↳ app/views/cinemas/index.html.erb:3
+  Rendered cinemas/index.html.erb within layouts/application (12.3ms)
+Completed 200 OK in 62ms (Views: 50.0ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/cinemas" for 127.0.0.1 at 2019-02-04 09:58:56 -0500
+Processing by CinemasController#index as HTML
+Completed 500 Internal Server Error in 3762472ms (ActiveRecord: 0.0ms)
+
+
+  
+SystemExit (exit):
+Started GET "/cinemas.5" for 127.0.0.1 at 2019-02-04 11:01:39 -0500
+  
+Started GET "/movies" for 127.0.0.1 at 2019-02-04 11:01:39 -0500
+Processing by CinemasController#index as 
+(byebug):1:in `exit'
+(byebug):1:in `index'
+app/controllers/cinemas_controller.rb:8:in `index'
+Completed 500 Internal Server Error in 2210ms (ActiveRecord: 0.0ms)
+
+
+  
+SystemExit (exit):
+  
+(byebug):1:in `exit'
+(byebug):1:in `index'
+app/controllers/cinemas_controller.rb:8:in `index'
+Processing by MoviesController#index as HTML
+  Rendering movies/index.html.erb within layouts/application
+  [1m[36mMovie Load (2.1ms)[0m  [1m[34mSELECT "movies".* FROM "movies"[0m
+  ↳ app/views/movies/index.html.erb:3
+  [1m[36mCinema Load (1.4ms)[0m  [1m[34mSELECT  "cinemas".* FROM "cinemas" WHERE "cinemas"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/models/movie.rb:18
+  [1m[36mViewer Load (1.3ms)[0m  [1m[34mSELECT  "viewers".* FROM "viewers" WHERE "viewers"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/models/movie.rb:10
+  [1m[36mCACHE Cinema Load (0.3ms)[0m  [1m[34mSELECT  "cinemas".* FROM "cinemas" WHERE "cinemas"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/models/movie.rb:18
+  [1m[36mCACHE Viewer Load (0.3ms)[0m  [1m[34mSELECT  "viewers".* FROM "viewers" WHERE "viewers"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/models/movie.rb:10
+  Rendered movies/index.html.erb within layouts/application (457.0ms)
+Completed 200 OK in 879ms (Views: 809.0ms | ActiveRecord: 26.1ms)
+
+
+Started GET "/movies" for 127.0.0.1 at 2019-02-04 11:02:02 -0500
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /usr/local/lib/ruby/gems/2.3.0/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+Processing by MoviesController#index as HTML
+  Rendering movies/index.html.erb within layouts/application
+  [1m[36mMovie Load (0.3ms)[0m  [1m[34mSELECT "movies".* FROM "movies"[0m
+  ↳ app/views/movies/index.html.erb:3
+  [1m[36mCinema Load (0.4ms)[0m  [1m[34mSELECT  "cinemas".* FROM "cinemas" WHERE "cinemas"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/models/movie.rb:18
+  [1m[36mViewer Load (0.2ms)[0m  [1m[34mSELECT  "viewers".* FROM "viewers" WHERE "viewers"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/models/movie.rb:10
+  [1m[36mCACHE Cinema Load (0.0ms)[0m  [1m[34mSELECT  "cinemas".* FROM "cinemas" WHERE "cinemas"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/models/movie.rb:18
+  [1m[36mCACHE Viewer Load (0.0ms)[0m  [1m[34mSELECT  "viewers".* FROM "viewers" WHERE "viewers"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/models/movie.rb:10
+  Rendered movies/index.html.erb within layouts/application (81.3ms)
+Completed 200 OK in 478ms (Views: 451.6ms | ActiveRecord: 3.5ms)
+
+
+Started GET "/cinemas/2" for 127.0.0.1 at 2019-02-04 11:02:03 -0500
+Processing by CinemasController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mCinema Load (0.3ms)[0m  [1m[34mSELECT  "cinemas".* FROM "cinemas" WHERE "cinemas"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/cinemas_controller.rb:38
+  Rendering cinemas/show.html.erb within layouts/application
+  Rendered cinemas/show.html.erb within layouts/application (3.8ms)
+Completed 200 OK in 66ms (Views: 56.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/cinemas" for 127.0.0.1 at 2019-02-04 11:02:07 -0500
+Processing by CinemasController#index as HTML
+  Rendering cinemas/index.html.erb within layouts/application
+  [1m[36mCinema Load (0.5ms)[0m  [1m[34mSELECT "cinemas".* FROM "cinemas"[0m
+  ↳ app/views/cinemas/index.html.erb:3
+  Rendered cinemas/index.html.erb within layouts/application (5.3ms)
+Completed 200 OK in 64ms (Views: 57.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/cinemas.5" for 127.0.0.1 at 2019-02-04 11:02:09 -0500
+Processing by CinemasController#index as 
+  Rendering cinemas/index.html.erb within layouts/application
+  [1m[36mCinema Load (0.3ms)[0m  [1m[34mSELECT "cinemas".* FROM "cinemas"[0m
+  ↳ app/views/cinemas/index.html.erb:3
+  Rendered cinemas/index.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 107ms (Views: 65.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/cinemas/2" for 127.0.0.1 at 2019-02-04 11:02:13 -0500
+Processing by CinemasController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mCinema Load (0.5ms)[0m  [1m[34mSELECT  "cinemas".* FROM "cinemas" WHERE "cinemas"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/cinemas_controller.rb:38
+  Rendering cinemas/show.html.erb within layouts/application
+  Rendered cinemas/show.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 57ms (Views: 50.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/cinemas/2/edit" for 127.0.0.1 at 2019-02-04 11:02:14 -0500
+Processing by CinemasController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mCinema Load (0.3ms)[0m  [1m[34mSELECT  "cinemas".* FROM "cinemas" WHERE "cinemas"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/cinemas_controller.rb:38
+  Rendering cinemas/edit.html.erb within layouts/application
+  Rendered cinemas/_cinema_form.html.erb (16.5ms)
+  Rendered cinemas/edit.html.erb within layouts/application (22.2ms)
+Completed 200 OK in 100ms (Views: 92.3ms | ActiveRecord: 0.3ms)
+
+
+Started PATCH "/cinemas/2" for 127.0.0.1 at 2019-02-04 11:02:17 -0500
+Processing by CinemasController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"rIYHBTpoQJahGYwTmJMQXKjxilwEUMOaViHJGRB/95mwLQLx3X89VmrV21887uFxiZ2UGVQcB7S7eQCe8pd3rQ==", "cinema"=>{"name"=>"fuzzy"}, "commit"=>"Update Cinema", "id"=>"2"}
+  [1m[36mCinema Load (0.2ms)[0m  [1m[34mSELECT  "cinemas".* FROM "cinemas" WHERE "cinemas"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/cinemas_controller.rb:38
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/cinemas_controller.rb:26
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/cinemas_controller.rb:26
+Redirected to http://localhost:3000/cinemas/2
+Completed 302 Found in 9ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/cinemas/2" for 127.0.0.1 at 2019-02-04 11:02:17 -0500
+Processing by CinemasController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mCinema Load (0.2ms)[0m  [1m[34mSELECT  "cinemas".* FROM "cinemas" WHERE "cinemas"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/cinemas_controller.rb:38
+  Rendering cinemas/show.html.erb within layouts/application
+  Rendered cinemas/show.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 51ms (Views: 44.4ms | ActiveRecord: 0.2ms)
+
+
+Started PATCH "/cinemas/2" for 127.0.0.1 at 2019-02-04 11:02:28 -0500
+Processing by CinemasController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"emblHlTDKAkFggWv7F1e7CaCjfLvgvMs53zbwWPQtaj+CpNrncOt0bp/qOo+XKZ6+kgJi4hlohAZ6ZgYcGAoVw==", "cinema"=>{"name"=>"Gallery Center"}, "commit"=>"Update Cinema", "id"=>"2"}
+  [1m[36mCinema Load (0.3ms)[0m  [1m[34mSELECT  "cinemas".* FROM "cinemas" WHERE "cinemas"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/cinemas_controller.rb:38
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/cinemas_controller.rb:26
+  [1m[36mCinema Update (1.6ms)[0m  [1m[33mUPDATE "cinemas" SET "name" = ?, "updated_at" = ? WHERE "cinemas"."id" = ?[0m  [["name", "Gallery Center"], ["updated_at", "2019-02-04 16:02:28.259033"], ["id", 2]]
+  ↳ app/controllers/cinemas_controller.rb:26
+  [1m[35m (1.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/cinemas_controller.rb:26
+Redirected to http://localhost:3000/cinemas/2
+Completed 302 Found in 14ms (ActiveRecord: 3.8ms)
+
+
+Started GET "/cinemas/2" for 127.0.0.1 at 2019-02-04 11:02:28 -0500
+Processing by CinemasController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mCinema Load (0.3ms)[0m  [1m[34mSELECT  "cinemas".* FROM "cinemas" WHERE "cinemas"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/cinemas_controller.rb:38
+  Rendering cinemas/show.html.erb within layouts/application
+  Rendered cinemas/show.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 60ms (Views: 52.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/cinemas" for 127.0.0.1 at 2019-02-04 11:02:30 -0500
+Processing by CinemasController#index as HTML
+  Rendering cinemas/index.html.erb within layouts/application
+  [1m[36mCinema Load (1.0ms)[0m  [1m[34mSELECT "cinemas".* FROM "cinemas"[0m
+  ↳ app/views/cinemas/index.html.erb:3
+  Rendered cinemas/index.html.erb within layouts/application (5.7ms)
+Completed 200 OK in 75ms (Views: 68.2ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/cinemas.1" for 127.0.0.1 at 2019-02-04 11:02:38 -0500
+Processing by CinemasController#index as 
+  Rendering cinemas/index.html.erb within layouts/application
+  [1m[36mCinema Load (0.3ms)[0m  [1m[34mSELECT "cinemas".* FROM "cinemas"[0m
+  ↳ app/views/cinemas/index.html.erb:3
+  Rendered cinemas/index.html.erb within layouts/application (3.9ms)
+Completed 200 OK in 119ms (Views: 83.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/cinemas.1" for 127.0.0.1 at 2019-02-04 11:02:40 -0500
+Processing by CinemasController#index as 
+  Rendering cinemas/index.html.erb within layouts/application
+  [1m[36mCinema Load (0.3ms)[0m  [1m[34mSELECT "cinemas".* FROM "cinemas"[0m
+  ↳ app/views/cinemas/index.html.erb:3
+  Rendered cinemas/index.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 100ms (Views: 71.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/cinemas.1" for 127.0.0.1 at 2019-02-04 11:02:41 -0500
+Processing by CinemasController#index as 
+  Rendering cinemas/index.html.erb within layouts/application
+  [1m[36mCinema Load (0.2ms)[0m  [1m[34mSELECT "cinemas".* FROM "cinemas"[0m
+  ↳ app/views/cinemas/index.html.erb:3
+  Rendered cinemas/index.html.erb within layouts/application (3.7ms)
+Completed 200 OK in 91ms (Views: 64.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/cinemas/2" for 127.0.0.1 at 2019-02-04 11:02:44 -0500
+Processing by CinemasController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mCinema Load (0.4ms)[0m  [1m[34mSELECT  "cinemas".* FROM "cinemas" WHERE "cinemas"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/cinemas_controller.rb:38
+  Rendering cinemas/show.html.erb within layouts/application
+  Rendered cinemas/show.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 60ms (Views: 53.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/cinemas/2" for 127.0.0.1 at 2019-02-04 11:02:50 -0500
+Processing by CinemasController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mCinema Load (0.2ms)[0m  [1m[34mSELECT  "cinemas".* FROM "cinemas" WHERE "cinemas"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/cinemas_controller.rb:38
+  Rendering cinemas/show.html.erb within layouts/application
+  Rendered cinemas/show.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 60ms (Views: 51.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/cinemas" for 127.0.0.1 at 2019-02-04 11:02:54 -0500
+Processing by CinemasController#index as HTML
+  Rendering cinemas/index.html.erb within layouts/application
+  [1m[36mCinema Load (0.4ms)[0m  [1m[34mSELECT "cinemas".* FROM "cinemas"[0m
+  ↳ app/views/cinemas/index.html.erb:3
+  Rendered cinemas/index.html.erb within layouts/application (4.5ms)
+Completed 200 OK in 54ms (Views: 49.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/cinemas.1" for 127.0.0.1 at 2019-02-04 11:02:55 -0500
+Processing by CinemasController#index as 
+  Rendering cinemas/index.html.erb within layouts/application
+  [1m[36mCinema Load (0.2ms)[0m  [1m[34mSELECT "cinemas".* FROM "cinemas"[0m
+  ↳ app/views/cinemas/index.html.erb:3
+  Rendered cinemas/index.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 88ms (Views: 56.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/cinemas.1" for 127.0.0.1 at 2019-02-04 11:02:56 -0500
+Processing by CinemasController#index as 
+  Rendering cinemas/index.html.erb within layouts/application
+  [1m[36mCinema Load (0.2ms)[0m  [1m[34mSELECT "cinemas".* FROM "cinemas"[0m
+  ↳ app/views/cinemas/index.html.erb:3
+  Rendered cinemas/index.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 86ms (Views: 58.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/cinemas/1" for 127.0.0.1 at 2019-02-04 11:02:59 -0500
+Processing by CinemasController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCinema Load (0.2ms)[0m  [1m[34mSELECT  "cinemas".* FROM "cinemas" WHERE "cinemas"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/cinemas_controller.rb:38
+  Rendering cinemas/show.html.erb within layouts/application
+  Rendered cinemas/show.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 47ms (Views: 41.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/cinemas/1/edit" for 127.0.0.1 at 2019-02-04 11:03:01 -0500
+Processing by CinemasController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCinema Load (0.2ms)[0m  [1m[34mSELECT  "cinemas".* FROM "cinemas" WHERE "cinemas"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/cinemas_controller.rb:38
+  Rendering cinemas/edit.html.erb within layouts/application
+  Rendered cinemas/_cinema_form.html.erb (2.5ms)
+  Rendered cinemas/edit.html.erb within layouts/application (5.1ms)
+Completed 200 OK in 51ms (Views: 44.5ms | ActiveRecord: 0.2ms)
+
+
+Started PATCH "/cinemas/1" for 127.0.0.1 at 2019-02-04 11:03:12 -0500
+Processing by CinemasController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"tvci6e73K0gGDjBuMDV+pt+ocWm7mpinWV3doKVUfK2l8aLWHaVTBnGgxWRqNbJtTbGC4t5V0ajD3JGzNS/POQ==", "cinema"=>{"name"=>"Medium"}, "commit"=>"Update Cinema", "id"=>"1"}
+  [1m[36mCinema Load (0.2ms)[0m  [1m[34mSELECT  "cinemas".* FROM "cinemas" WHERE "cinemas"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/cinemas_controller.rb:38
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/cinemas_controller.rb:26
+  [1m[36mCinema Update (0.8ms)[0m  [1m[33mUPDATE "cinemas" SET "name" = ?, "updated_at" = ? WHERE "cinemas"."id" = ?[0m  [["name", "Medium"], ["updated_at", "2019-02-04 16:03:12.415301"], ["id", 1]]
+  ↳ app/controllers/cinemas_controller.rb:26
+  [1m[35m (1.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/cinemas_controller.rb:26
+Redirected to http://localhost:3000/cinemas/1
+Completed 302 Found in 13ms (ActiveRecord: 3.0ms)
+
+
+Started GET "/cinemas/1" for 127.0.0.1 at 2019-02-04 11:03:12 -0500
+Processing by CinemasController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCinema Load (0.6ms)[0m  [1m[34mSELECT  "cinemas".* FROM "cinemas" WHERE "cinemas"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/cinemas_controller.rb:38
+  Rendering cinemas/show.html.erb within layouts/application
+  Rendered cinemas/show.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 51ms (Views: 43.5ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/cinemas" for 127.0.0.1 at 2019-02-04 11:03:29 -0500
+Processing by CinemasController#index as HTML
+  Rendering cinemas/index.html.erb within layouts/application
+  [1m[36mCinema Load (0.5ms)[0m  [1m[34mSELECT "cinemas".* FROM "cinemas"[0m
+  ↳ app/views/cinemas/index.html.erb:3
+  Rendered cinemas/index.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 69ms (Views: 60.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/cinemas/1/edit" for 127.0.0.1 at 2019-02-04 11:03:38 -0500
+Processing by CinemasController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCinema Load (0.2ms)[0m  [1m[34mSELECT  "cinemas".* FROM "cinemas" WHERE "cinemas"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/cinemas_controller.rb:38
+  Rendering cinemas/edit.html.erb within layouts/application
+  Rendered cinemas/_cinema_form.html.erb (3.1ms)
+  Rendered cinemas/edit.html.erb within layouts/application (7.3ms)
+Completed 200 OK in 68ms (Views: 60.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/cinemas/1/update" for 127.0.0.1 at 2019-02-04 11:03:42 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/cinemas/1/update"):
+  
+actionpack (5.2.2) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.2) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.2) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.6) lib/rack/method_override.rb:22:in `call'
+rack (2.0.6) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.6) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.2) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/cinemas/1/edit" for 127.0.0.1 at 2019-02-04 11:03:49 -0500
+Processing by CinemasController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCinema Load (0.3ms)[0m  [1m[34mSELECT  "cinemas".* FROM "cinemas" WHERE "cinemas"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/cinemas_controller.rb:38
+  Rendering cinemas/edit.html.erb within layouts/application
+  Rendered cinemas/_cinema_form.html.erb (3.3ms)
+  Rendered cinemas/edit.html.erb within layouts/application (8.9ms)
+Completed 200 OK in 72ms (Views: 65.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/viewers/new" for 127.0.0.1 at 2019-02-04 11:04:01 -0500
+Processing by ViewersController#new as HTML
+  Rendering viewers/new.html.erb within layouts/application
+  Rendered viewers/_viewer_form.html.erb (6.1ms)
+  Rendered viewers/new.html.erb within layouts/application (12.9ms)
+Completed 200 OK in 67ms (Views: 61.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/viewers/new/1" for 127.0.0.1 at 2019-02-04 11:04:05 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/viewers/new/1"):
+  
+actionpack (5.2.2) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.2) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.2) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.6) lib/rack/method_override.rb:22:in `call'
+rack (2.0.6) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.6) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.2) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started POST "/viewers" for 127.0.0.1 at 2019-02-04 11:04:16 -0500
+Processing by ViewersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"JgC3k21h+FELARYpd3y8ZNo76j10YG8h0omjyUnMsmKibMHmpGF9ibT8u2ylfUTyBvFuRBOHPh0sHOAQWnwvnQ==", "viewer"=>{"first_name"=>"Noah", "last_name"=>"Altunian"}, "commit"=>"Create Viewer"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/viewers_controller.rb:17
+  [1m[36mViewer Create (0.8ms)[0m  [1m[32mINSERT INTO "viewers" ("first_name", "last_name", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["first_name", "Noah"], ["last_name", "Altunian"], ["created_at", "2019-02-04 16:04:16.162940"], ["updated_at", "2019-02-04 16:04:16.162940"]]
+  ↳ app/controllers/viewers_controller.rb:17
+  [1m[35m (2.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/viewers_controller.rb:17
+Redirected to http://localhost:3000/viewers/8
+Completed 302 Found in 13ms (ActiveRecord: 2.9ms)
+
+
+Started GET "/viewers/8" for 127.0.0.1 at 2019-02-04 11:04:16 -0500
+Processing by ViewersController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mViewer Load (0.3ms)[0m  [1m[34mSELECT  "viewers".* FROM "viewers" WHERE "viewers"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/viewers_controller.rb:37
+  Rendering viewers/show.html.erb within layouts/application
+  Rendered viewers/show.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 54ms (Views: 46.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/viewers" for 127.0.0.1 at 2019-02-04 11:04:17 -0500
+Processing by ViewersController#index as HTML
+  Rendering viewers/index.html.erb within layouts/application
+  [1m[36mViewer Load (0.3ms)[0m  [1m[34mSELECT "viewers".* FROM "viewers"[0m
+  ↳ app/views/viewers/index.html.erb:3
+  Rendered viewers/index.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 47ms (Views: 40.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/viewers/8" for 127.0.0.1 at 2019-02-04 11:04:21 -0500
+Processing by ViewersController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mViewer Load (0.3ms)[0m  [1m[34mSELECT  "viewers".* FROM "viewers" WHERE "viewers"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/viewers_controller.rb:37
+  Rendering viewers/show.html.erb within layouts/application
+  Rendered viewers/show.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 51ms (Views: 42.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/viewers" for 127.0.0.1 at 2019-02-04 11:04:23 -0500
+Processing by ViewersController#index as HTML
+  Rendering viewers/index.html.erb within layouts/application
+  [1m[36mViewer Load (0.6ms)[0m  [1m[34mSELECT "viewers".* FROM "viewers"[0m
+  ↳ app/views/viewers/index.html.erb:3
+  Rendered viewers/index.html.erb within layouts/application (3.9ms)
+Completed 200 OK in 52ms (Views: 45.7ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/viewers/8" for 127.0.0.1 at 2019-02-04 11:04:24 -0500
+Processing by ViewersController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mViewer Load (0.2ms)[0m  [1m[34mSELECT  "viewers".* FROM "viewers" WHERE "viewers"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/viewers_controller.rb:37
+  Rendering viewers/show.html.erb within layouts/application
+  Rendered viewers/show.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 52ms (Views: 45.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/viewers/8/edit" for 127.0.0.1 at 2019-02-04 11:04:25 -0500
+Processing by ViewersController#edit as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mViewer Load (0.4ms)[0m  [1m[34mSELECT  "viewers".* FROM "viewers" WHERE "viewers"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/viewers_controller.rb:37
+  Rendering viewers/edit.html.erb within layouts/application
+  Rendered viewers/_viewer_form.html.erb (3.7ms)
+  Rendered viewers/edit.html.erb within layouts/application (7.3ms)
+Completed 200 OK in 55ms (Views: 47.6ms | ActiveRecord: 0.4ms)
+
+
+Started PATCH "/viewers/8" for 127.0.0.1 at 2019-02-04 11:04:34 -0500
+Processing by ViewersController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"qNzclm6+LTXlXDLb1NSWd/e7qzyTgzq10ErsAAyz3RUIwEUKyauJyiIIVXpN2g74M7371SzgSoWJaCLYIXtG5g==", "viewer"=>{"first_name"=>"Rubin", "last_name"=>"Altunian"}, "commit"=>"Update Viewer", "id"=>"8"}
+  [1m[36mViewer Load (0.3ms)[0m  [1m[34mSELECT  "viewers".* FROM "viewers" WHERE "viewers"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/viewers_controller.rb:37
+  [1m[35m (0.3ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/viewers_controller.rb:25
+  [1m[36mViewer Update (0.7ms)[0m  [1m[33mUPDATE "viewers" SET "first_name" = ?, "updated_at" = ? WHERE "viewers"."id" = ?[0m  [["first_name", "Rubin"], ["updated_at", "2019-02-04 16:04:34.305474"], ["id", 8]]
+  ↳ app/controllers/viewers_controller.rb:25
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/viewers_controller.rb:25
+Redirected to http://localhost:3000/viewers/8
+Completed 302 Found in 13ms (ActiveRecord: 2.3ms)
+
+
+Started GET "/viewers/8" for 127.0.0.1 at 2019-02-04 11:04:34 -0500
+Processing by ViewersController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mViewer Load (0.2ms)[0m  [1m[34mSELECT  "viewers".* FROM "viewers" WHERE "viewers"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/viewers_controller.rb:37
+  Rendering viewers/show.html.erb within layouts/application
+  Rendered viewers/show.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 48ms (Views: 40.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/viewers/8/edit" for 127.0.0.1 at 2019-02-04 11:04:36 -0500
+Processing by ViewersController#edit as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mViewer Load (0.3ms)[0m  [1m[34mSELECT  "viewers".* FROM "viewers" WHERE "viewers"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/viewers_controller.rb:37
+  Rendering viewers/edit.html.erb within layouts/application
+  Rendered viewers/_viewer_form.html.erb (4.0ms)
+  Rendered viewers/edit.html.erb within layouts/application (8.2ms)
+Completed 200 OK in 71ms (Views: 64.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/movies/2" for 127.0.0.1 at 2019-02-04 11:05:40 -0500
+Processing by MoviesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mMovie Load (0.3ms)[0m  [1m[34mSELECT  "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/movies_controller.rb:38
+  Rendering movies/show.html.erb within layouts/application
+  [1m[36mCinema Load (0.2ms)[0m  [1m[34mSELECT  "cinemas".* FROM "cinemas" WHERE "cinemas"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/models/movie.rb:18
+  [1m[36mViewer Load (0.2ms)[0m  [1m[34mSELECT  "viewers".* FROM "viewers" WHERE "viewers"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/models/movie.rb:10
+  Rendered movies/show.html.erb within layouts/application (7.3ms)
+Completed 200 OK in 68ms (Views: 59.8ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/movies/2/edit" for 127.0.0.1 at 2019-02-04 11:05:44 -0500
+Processing by MoviesController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mMovie Load (0.2ms)[0m  [1m[34mSELECT  "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/movies_controller.rb:38
+  Rendering movies/edit.html.erb within layouts/application
+  [1m[36mCinema Load (0.2ms)[0m  [1m[34mSELECT  "cinemas".* FROM "cinemas" WHERE "cinemas"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/models/movie.rb:18
+  [1m[36mCinema Load (0.3ms)[0m  [1m[34mSELECT "cinemas".* FROM "cinemas"[0m
+  ↳ app/views/movies/_movie_form.html.erb:4
+  [1m[36mViewer Load (0.2ms)[0m  [1m[34mSELECT  "viewers".* FROM "viewers" WHERE "viewers"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/models/movie.rb:10
+  [1m[36mViewer Load (0.2ms)[0m  [1m[34mSELECT "viewers".* FROM "viewers"[0m
+  ↳ app/views/movies/_movie_form.html.erb:5
+  Rendered movies/_movie_form.html.erb (22.9ms)
+  Rendered movies/edit.html.erb within layouts/application (27.5ms)
+Completed 200 OK in 83ms (Views: 69.8ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/movies/2/edit" for 127.0.0.1 at 2019-02-04 11:06:43 -0500
+Processing by MoviesController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mMovie Load (0.3ms)[0m  [1m[34mSELECT  "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/movies_controller.rb:38
+  Rendering movies/edit.html.erb within layouts/application
+  [1m[36mCinema Load (0.2ms)[0m  [1m[34mSELECT  "cinemas".* FROM "cinemas" WHERE "cinemas"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/models/movie.rb:18
+  [1m[36mCinema Load (0.4ms)[0m  [1m[34mSELECT "cinemas".* FROM "cinemas"[0m
+  ↳ app/views/movies/_movie_form.html.erb:4
+  [1m[36mViewer Load (0.2ms)[0m  [1m[34mSELECT  "viewers".* FROM "viewers" WHERE "viewers"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/models/movie.rb:10
+  [1m[36mViewer Load (0.3ms)[0m  [1m[34mSELECT "viewers".* FROM "viewers"[0m
+  ↳ app/views/movies/_movie_form.html.erb:5
+  Rendered movies/_movie_form.html.erb (12.8ms)
+  Rendered movies/edit.html.erb within layouts/application (17.0ms)
+Completed 200 OK in 67ms (Views: 57.8ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/movies/2/edit" for 127.0.0.1 at 2019-02-04 11:06:48 -0500
+Processing by MoviesController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mMovie Load (0.5ms)[0m  [1m[34mSELECT  "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/movies_controller.rb:38
+  Rendering movies/edit.html.erb within layouts/application
+  [1m[36mCinema Load (0.3ms)[0m  [1m[34mSELECT  "cinemas".* FROM "cinemas" WHERE "cinemas"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/models/movie.rb:18
+  [1m[36mCinema Load (0.2ms)[0m  [1m[34mSELECT "cinemas".* FROM "cinemas"[0m
+  ↳ app/views/movies/_movie_form.html.erb:4
+  [1m[36mViewer Load (0.3ms)[0m  [1m[34mSELECT  "viewers".* FROM "viewers" WHERE "viewers"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/models/movie.rb:10
+  [1m[36mViewer Load (0.3ms)[0m  [1m[34mSELECT "viewers".* FROM "viewers"[0m
+  ↳ app/views/movies/_movie_form.html.erb:5
+  Rendered movies/_movie_form.html.erb (12.6ms)
+  Rendered movies/edit.html.erb within layouts/application (16.9ms)
+Completed 200 OK in 66ms (Views: 58.9ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/movies/2/edit" for 127.0.0.1 at 2019-02-04 11:06:48 -0500
+Processing by MoviesController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mMovie Load (0.2ms)[0m  [1m[34mSELECT  "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/movies_controller.rb:38
+  Rendering movies/edit.html.erb within layouts/application
+  [1m[36mCinema Load (0.2ms)[0m  [1m[34mSELECT  "cinemas".* FROM "cinemas" WHERE "cinemas"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/models/movie.rb:18
+  [1m[36mCinema Load (0.3ms)[0m  [1m[34mSELECT "cinemas".* FROM "cinemas"[0m
+  ↳ app/views/movies/_movie_form.html.erb:4
+  [1m[36mViewer Load (0.3ms)[0m  [1m[34mSELECT  "viewers".* FROM "viewers" WHERE "viewers"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/models/movie.rb:10
+  [1m[36mViewer Load (0.4ms)[0m  [1m[34mSELECT "viewers".* FROM "viewers"[0m
+  ↳ app/views/movies/_movie_form.html.erb:5
+  Rendered movies/_movie_form.html.erb (12.2ms)
+  Rendered movies/edit.html.erb within layouts/application (15.6ms)
+Completed 200 OK in 79ms (Views: 73.0ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/movies/2/edit" for 127.0.0.1 at 2019-02-04 11:07:14 -0500
+Processing by MoviesController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mMovie Load (0.2ms)[0m  [1m[34mSELECT  "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/movies_controller.rb:38
+  Rendering movies/edit.html.erb within layouts/application
+  [1m[36mCinema Load (0.2ms)[0m  [1m[34mSELECT  "cinemas".* FROM "cinemas" WHERE "cinemas"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/models/movie.rb:18
+  [1m[36mCinema Load (4.7ms)[0m  [1m[34mSELECT "cinemas".* FROM "cinemas"[0m
+  ↳ app/views/movies/_movie_form.html.erb:4
+  [1m[36mViewer Load (0.2ms)[0m  [1m[34mSELECT  "viewers".* FROM "viewers" WHERE "viewers"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/models/movie.rb:10
+  [1m[36mViewer Load (0.7ms)[0m  [1m[34mSELECT "viewers".* FROM "viewers"[0m
+  ↳ app/views/movies/_movie_form.html.erb:5
+  Rendered movies/_movie_form.html.erb (38.8ms)
+  Rendered movies/edit.html.erb within layouts/application (57.4ms)
+Completed 200 OK in 114ms (Views: 102.1ms | ActiveRecord: 6.0ms)
+
+
+Started GET "/movies/2" for 127.0.0.1 at 2019-02-04 11:07:21 -0500
+Processing by MoviesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mMovie Load (0.2ms)[0m  [1m[34mSELECT  "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/movies_controller.rb:38
+  Rendering movies/show.html.erb within layouts/application
+  [1m[36mCinema Load (0.2ms)[0m  [1m[34mSELECT  "cinemas".* FROM "cinemas" WHERE "cinemas"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/models/movie.rb:18
+  [1m[36mViewer Load (0.2ms)[0m  [1m[34mSELECT  "viewers".* FROM "viewers" WHERE "viewers"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/models/movie.rb:10
+  Rendered movies/show.html.erb within layouts/application (7.1ms)
+Completed 200 OK in 70ms (Views: 61.5ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/movies/2" for 127.0.0.1 at 2019-02-04 11:07:23 -0500
+Processing by MoviesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mMovie Load (0.5ms)[0m  [1m[34mSELECT  "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/movies_controller.rb:38
+  Rendering movies/show.html.erb within layouts/application
+  [1m[36mCinema Load (0.2ms)[0m  [1m[34mSELECT  "cinemas".* FROM "cinemas" WHERE "cinemas"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/models/movie.rb:18
+  [1m[36mViewer Load (0.3ms)[0m  [1m[34mSELECT  "viewers".* FROM "viewers" WHERE "viewers"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/models/movie.rb:10
+  Rendered movies/show.html.erb within layouts/application (7.8ms)
+Completed 200 OK in 62ms (Views: 55.9ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/movies/2" for 127.0.0.1 at 2019-02-04 11:07:23 -0500
+Processing by MoviesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mMovie Load (0.2ms)[0m  [1m[34mSELECT  "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/movies_controller.rb:38
+  Rendering movies/show.html.erb within layouts/application
+  [1m[36mCinema Load (0.1ms)[0m  [1m[34mSELECT  "cinemas".* FROM "cinemas" WHERE "cinemas"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/models/movie.rb:18
+  [1m[36mViewer Load (0.3ms)[0m  [1m[34mSELECT  "viewers".* FROM "viewers" WHERE "viewers"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/models/movie.rb:10
+  Rendered movies/show.html.erb within layouts/application (5.4ms)
+Completed 200 OK in 56ms (Views: 50.3ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/movies/2" for 127.0.0.1 at 2019-02-04 11:07:23 -0500
+Processing by MoviesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mMovie Load (0.5ms)[0m  [1m[34mSELECT  "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/movies_controller.rb:38
+  Rendering movies/show.html.erb within layouts/application
+  [1m[36mCinema Load (0.2ms)[0m  [1m[34mSELECT  "cinemas".* FROM "cinemas" WHERE "cinemas"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/models/movie.rb:18
+  [1m[36mViewer Load (0.5ms)[0m  [1m[34mSELECT  "viewers".* FROM "viewers" WHERE "viewers"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/models/movie.rb:10
+  Rendered movies/show.html.erb within layouts/application (9.3ms)
+Completed 200 OK in 66ms (Views: 59.5ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/movies/2" for 127.0.0.1 at 2019-02-04 11:07:23 -0500
+Processing by MoviesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mMovie Load (0.2ms)[0m  [1m[34mSELECT  "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/movies_controller.rb:38
+  Rendering movies/show.html.erb within layouts/application
+  [1m[36mCinema Load (0.4ms)[0m  [1m[34mSELECT  "cinemas".* FROM "cinemas" WHERE "cinemas"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/models/movie.rb:18
+  [1m[36mViewer Load (0.2ms)[0m  [1m[34mSELECT  "viewers".* FROM "viewers" WHERE "viewers"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/models/movie.rb:10
+  Rendered movies/show.html.erb within layouts/application (5.1ms)
+Completed 200 OK in 66ms (Views: 58.4ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/movies/2/edit" for 127.0.0.1 at 2019-02-04 11:07:24 -0500
+Processing by MoviesController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mMovie Load (0.2ms)[0m  [1m[34mSELECT  "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/movies_controller.rb:38
+  Rendering movies/edit.html.erb within layouts/application
+  [1m[36mCinema Load (0.2ms)[0m  [1m[34mSELECT  "cinemas".* FROM "cinemas" WHERE "cinemas"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/models/movie.rb:18
+  [1m[36mCinema Load (0.3ms)[0m  [1m[34mSELECT "cinemas".* FROM "cinemas"[0m
+  ↳ app/views/movies/_movie_form.html.erb:4
+  [1m[36mViewer Load (0.2ms)[0m  [1m[34mSELECT  "viewers".* FROM "viewers" WHERE "viewers"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/models/movie.rb:10
+  [1m[36mViewer Load (0.4ms)[0m  [1m[34mSELECT "viewers".* FROM "viewers"[0m
+  ↳ app/views/movies/_movie_form.html.erb:5
+  Rendered movies/_movie_form.html.erb (12.5ms)
+  Rendered movies/edit.html.erb within layouts/application (17.5ms)
+Completed 200 OK in 65ms (Views: 58.2ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/movies" for 127.0.0.1 at 2019-02-04 11:31:34 -0500
+Processing by MoviesController#index as HTML
+  Rendering movies/index.html.erb within layouts/application
+  [1m[36mMovie Load (0.9ms)[0m  [1m[34mSELECT "movies".* FROM "movies"[0m
+  ↳ app/views/movies/index.html.erb:3
+  [1m[36mCinema Load (0.6ms)[0m  [1m[34mSELECT  "cinemas".* FROM "cinemas" WHERE "cinemas"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/models/movie.rb:18
+  [1m[36mViewer Load (0.5ms)[0m  [1m[34mSELECT  "viewers".* FROM "viewers" WHERE "viewers"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/models/movie.rb:10
+  [1m[36mCACHE Cinema Load (0.0ms)[0m  [1m[34mSELECT  "cinemas".* FROM "cinemas" WHERE "cinemas"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/models/movie.rb:18
+  [1m[36mCACHE Viewer Load (0.0ms)[0m  [1m[34mSELECT  "viewers".* FROM "viewers" WHERE "viewers"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/models/movie.rb:10
+  Rendered movies/index.html.erb within layouts/application (31.7ms)
+Completed 200 OK in 122ms (Views: 106.8ms | ActiveRecord: 3.8ms)
+
+
+Started GET "/cinemas/2" for 127.0.0.1 at 2019-02-04 11:31:36 -0500
+Processing by CinemasController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mCinema Load (0.3ms)[0m  [1m[34mSELECT  "cinemas".* FROM "cinemas" WHERE "cinemas"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/cinemas_controller.rb:38
+  Rendering cinemas/show.html.erb within layouts/application
+  Rendered cinemas/show.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 88ms (Views: 76.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/movies/new" for 127.0.0.1 at 2019-02-04 11:31:45 -0500
+Processing by MoviesController#new as HTML
+  Rendering movies/new.html.erb within layouts/application
+  [1m[36mCinema Load (0.2ms)[0m  [1m[34mSELECT "cinemas".* FROM "cinemas"[0m
+  ↳ app/views/movies/_movie_form.html.erb:4
+  [1m[36mViewer Load (0.3ms)[0m  [1m[34mSELECT "viewers".* FROM "viewers"[0m
+  ↳ app/views/movies/_movie_form.html.erb:5
+  Rendered movies/_movie_form.html.erb (10.3ms)
+  Rendered movies/new.html.erb within layouts/application (14.5ms)
+Completed 200 OK in 72ms (Views: 66.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/movies" for 127.0.0.1 at 2019-02-04 11:31:51 -0500
+Processing by MoviesController#index as HTML
+  Rendering movies/index.html.erb within layouts/application
+  [1m[36mMovie Load (0.4ms)[0m  [1m[34mSELECT "movies".* FROM "movies"[0m
+  ↳ app/views/movies/index.html.erb:3
+  [1m[36mCinema Load (0.3ms)[0m  [1m[34mSELECT  "cinemas".* FROM "cinemas" WHERE "cinemas"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/models/movie.rb:18
+  [1m[36mViewer Load (0.3ms)[0m  [1m[34mSELECT  "viewers".* FROM "viewers" WHERE "viewers"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/models/movie.rb:10
+  [1m[36mCACHE Cinema Load (0.0ms)[0m  [1m[34mSELECT  "cinemas".* FROM "cinemas" WHERE "cinemas"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/models/movie.rb:18
+  [1m[36mCACHE Viewer Load (0.1ms)[0m  [1m[34mSELECT  "viewers".* FROM "viewers" WHERE "viewers"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/models/movie.rb:10
+  Rendered movies/index.html.erb within layouts/application (15.0ms)
+Completed 200 OK in 71ms (Views: 65.9ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/cinemas/2" for 127.0.0.1 at 2019-02-04 11:32:05 -0500
+Processing by CinemasController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mCinema Load (0.2ms)[0m  [1m[34mSELECT  "cinemas".* FROM "cinemas" WHERE "cinemas"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/cinemas_controller.rb:38
+  Rendering cinemas/show.html.erb within layouts/application
+  Rendered cinemas/show.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 60ms (Views: 51.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/cinemas" for 127.0.0.1 at 2019-02-04 11:32:07 -0500
+Processing by CinemasController#index as HTML
+  Rendering cinemas/index.html.erb within layouts/application
+  [1m[36mCinema Load (0.5ms)[0m  [1m[34mSELECT "cinemas".* FROM "cinemas"[0m
+  ↳ app/views/cinemas/index.html.erb:3
+  Rendered cinemas/index.html.erb within layouts/application (4.9ms)
+Completed 200 OK in 88ms (Views: 81.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/cinemas.2" for 127.0.0.1 at 2019-02-04 11:32:08 -0500
+Processing by CinemasController#index as 
+  Rendering cinemas/index.html.erb within layouts/application
+  [1m[36mCinema Load (0.2ms)[0m  [1m[34mSELECT "cinemas".* FROM "cinemas"[0m
+  ↳ app/views/cinemas/index.html.erb:3
+  Rendered cinemas/index.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 146ms (Views: 94.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/cinemas.2" for 127.0.0.1 at 2019-02-04 11:34:24 -0500
+Processing by CinemasController#index as 
+  Rendering cinemas/index.html.erb within layouts/application
+  [1m[36mCinema Load (0.3ms)[0m  [1m[34mSELECT "cinemas".* FROM "cinemas"[0m
+  ↳ app/views/cinemas/index.html.erb:3
+  Rendered cinemas/index.html.erb within layouts/application (4.3ms)
+Completed 200 OK in 140ms (Views: 104.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/cinemas/2" for 127.0.0.1 at 2019-02-04 11:34:26 -0500
+Processing by CinemasController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mCinema Load (0.7ms)[0m  [1m[34mSELECT  "cinemas".* FROM "cinemas" WHERE "cinemas"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/cinemas_controller.rb:38
+  Rendering cinemas/show.html.erb within layouts/application
+  Rendered cinemas/show.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 58ms (Views: 51.1ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/cinemas" for 127.0.0.1 at 2019-02-04 11:34:29 -0500
+Processing by CinemasController#index as HTML
+  Rendering cinemas/index.html.erb within layouts/application
+  [1m[36mCinema Load (0.6ms)[0m  [1m[34mSELECT "cinemas".* FROM "cinemas"[0m
+  ↳ app/views/cinemas/index.html.erb:3
+  Rendered cinemas/index.html.erb within layouts/application (4.5ms)
+Completed 200 OK in 52ms (Views: 47.7ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/cinemas" for 127.0.0.1 at 2019-02-04 11:35:56 -0500
+Processing by CinemasController#index as HTML
+  Rendering cinemas/index.html.erb within layouts/application
+  [1m[36mCinema Load (0.2ms)[0m  [1m[34mSELECT "cinemas".* FROM "cinemas"[0m
+  ↳ app/views/cinemas/index.html.erb:3
+  Rendered cinemas/index.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 46ms (Views: 42.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/cinemas" for 127.0.0.1 at 2019-02-04 11:37:35 -0500
+Processing by CinemasController#index as HTML
+  Rendering cinemas/index.html.erb within layouts/application
+  [1m[36mCinema Load (0.2ms)[0m  [1m[34mSELECT "cinemas".* FROM "cinemas"[0m
+  ↳ app/views/cinemas/index.html.erb:3
+  Rendered cinemas/index.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 42ms (Views: 37.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/cinemas" for 127.0.0.1 at 2019-02-04 11:37:40 -0500
+Processing by CinemasController#index as HTML
+  Rendering cinemas/index.html.erb within layouts/application
+  [1m[36mCinema Load (0.2ms)[0m  [1m[34mSELECT "cinemas".* FROM "cinemas"[0m
+  ↳ app/views/cinemas/index.html.erb:3
+  Rendered cinemas/index.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 42ms (Views: 38.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/cinemas" for 127.0.0.1 at 2019-02-04 11:38:31 -0500
+Processing by CinemasController#index as HTML
+  Rendering cinemas/index.html.erb within layouts/application
+  [1m[36mCinema Load (0.6ms)[0m  [1m[34mSELECT "cinemas".* FROM "cinemas"[0m
+  ↳ app/views/cinemas/index.html.erb:3
+  Rendered cinemas/index.html.erb within layouts/application (3.6ms)
+Completed 200 OK in 71ms (Views: 65.8ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/cinemas/1" for 127.0.0.1 at 2019-02-04 11:38:35 -0500
+Processing by CinemasController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCinema Load (0.2ms)[0m  [1m[34mSELECT  "cinemas".* FROM "cinemas" WHERE "cinemas"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/cinemas_controller.rb:38
+  Rendering cinemas/show.html.erb within layouts/application
+  Rendered cinemas/show.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 46ms (Views: 39.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/movis" for 127.0.0.1 at 2019-02-04 11:38:39 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/movis"):
+  
+actionpack (5.2.2) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.2) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.2) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.6) lib/rack/method_override.rb:22:in `call'
+rack (2.0.6) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.6) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.2) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/movies" for 127.0.0.1 at 2019-02-04 11:38:42 -0500
+Processing by MoviesController#index as HTML
+  Rendering movies/index.html.erb within layouts/application
+  [1m[36mMovie Load (0.4ms)[0m  [1m[34mSELECT "movies".* FROM "movies"[0m
+  ↳ app/views/movies/index.html.erb:3
+  [1m[36mCinema Load (0.3ms)[0m  [1m[34mSELECT  "cinemas".* FROM "cinemas" WHERE "cinemas"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/models/movie.rb:18
+  [1m[36mViewer Load (0.2ms)[0m  [1m[34mSELECT  "viewers".* FROM "viewers" WHERE "viewers"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/models/movie.rb:10
+  [1m[36mCACHE Cinema Load (0.0ms)[0m  [1m[34mSELECT  "cinemas".* FROM "cinemas" WHERE "cinemas"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/models/movie.rb:18
+  [1m[36mCACHE Viewer Load (0.0ms)[0m  [1m[34mSELECT  "viewers".* FROM "viewers" WHERE "viewers"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/models/movie.rb:10
+  Rendered movies/index.html.erb within layouts/application (13.6ms)
+Completed 200 OK in 68ms (Views: 62.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/cinemas/2" for 127.0.0.1 at 2019-02-04 11:38:48 -0500
+Processing by CinemasController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mCinema Load (0.2ms)[0m  [1m[34mSELECT  "cinemas".* FROM "cinemas" WHERE "cinemas"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/cinemas_controller.rb:38
+  Rendering cinemas/show.html.erb within layouts/application
+  Rendered cinemas/show.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 49ms (Views: 39.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/movies" for 127.0.0.1 at 2019-02-04 21:15:05 -0500
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /usr/local/lib/ruby/gems/2.3.0/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+Processing by MoviesController#index as HTML
+  Rendering movies/index.html.erb within layouts/application
+  [1m[36mMovie Load (0.5ms)[0m  [1m[34mSELECT "movies".* FROM "movies"[0m
+  ↳ app/views/movies/index.html.erb:3
+  [1m[36mCinema Load (1.0ms)[0m  [1m[34mSELECT  "cinemas".* FROM "cinemas" WHERE "cinemas"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/models/movie.rb:18
+  [1m[36mViewer Load (0.7ms)[0m  [1m[34mSELECT  "viewers".* FROM "viewers" WHERE "viewers"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/models/movie.rb:10
+  [1m[36mCACHE Cinema Load (0.0ms)[0m  [1m[34mSELECT  "cinemas".* FROM "cinemas" WHERE "cinemas"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/models/movie.rb:18
+  [1m[36mCACHE Viewer Load (0.0ms)[0m  [1m[34mSELECT  "viewers".* FROM "viewers" WHERE "viewers"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/models/movie.rb:10
+  Rendered movies/index.html.erb within layouts/application (127.1ms)
+Completed 200 OK in 606ms (Views: 574.0ms | ActiveRecord: 5.0ms)
+
+
+Started GET "/movies/new" for 127.0.0.1 at 2019-02-04 21:15:12 -0500
+Processing by MoviesController#new as HTML
+  Rendering movies/new.html.erb within layouts/application
+  [1m[36mCinema Load (0.3ms)[0m  [1m[34mSELECT "cinemas".* FROM "cinemas"[0m
+  ↳ app/views/movies/_movie_form.html.erb:4
+  Rendered movies/_movie_form.html.erb (25.7ms)
+  Rendered movies/new.html.erb within layouts/application (30.9ms)
+Completed 500 Internal Server Error in 49ms (ActiveRecord: 0.3ms)
+
+
+  
+ActionView::Template::Error ({:prompt=>true} is not a symbol nor a string):
+    1: <%= form_for @movie do |f| %>
+    2:   <%= f.label :title %>
+    3:   <%= f.text_field :title %>
+    4:   Cinema: <%= f.collection_select(:cinema_name, Cinema.all, :name, prompt: true)%>
+    5:   Viewer: <%= f.collection_select(:viewer_name, Viewer.all, :first_name, prompt: true)%>
+    6:   <%= f.submit %>
+    7: <% end %> 
+  
+app/views/movies/_movie_form.html.erb:4:in `block in _app_views_movies__movie_form_html_erb___2923553761452446125_70134320099480'
+app/views/movies/_movie_form.html.erb:1:in `_app_views_movies__movie_form_html_erb___2923553761452446125_70134320099480'
+app/views/movies/new.html.erb:2:in `_app_views_movies_new_html_erb__4608945991143000034_70134336007060'
+Started GET "/movies/new" for 127.0.0.1 at 2019-02-04 21:16:52 -0500
+Processing by MoviesController#new as HTML
+  Rendering movies/new.html.erb within layouts/application
+  [1m[36mCinema Load (0.3ms)[0m  [1m[34mSELECT "cinemas".* FROM "cinemas"[0m
+  ↳ app/views/movies/_movie_form.html.erb:4
+  [1m[36mViewer Load (0.2ms)[0m  [1m[34mSELECT "viewers".* FROM "viewers"[0m
+  ↳ app/views/movies/_movie_form.html.erb:5
+  Rendered movies/_movie_form.html.erb (11.9ms)
+  Rendered movies/new.html.erb within layouts/application (17.1ms)
+Completed 200 OK in 104ms (Views: 97.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/movies/new" for 127.0.0.1 at 2019-02-04 21:18:22 -0500
+Processing by MoviesController#new as HTML
+  Rendering movies/new.html.erb within layouts/application
+  [1m[36mCinema Load (0.3ms)[0m  [1m[34mSELECT "cinemas".* FROM "cinemas"[0m
+  ↳ app/views/movies/_movie_form.html.erb:4
+  [1m[36mViewer Load (0.4ms)[0m  [1m[34mSELECT "viewers".* FROM "viewers"[0m
+  ↳ app/views/movies/_movie_form.html.erb:5
+  Rendered movies/_movie_form.html.erb (10.7ms)
+  Rendered movies/new.html.erb within layouts/application (15.8ms)
+Completed 200 OK in 84ms (Views: 79.0ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/movies/new" for 127.0.0.1 at 2019-02-04 21:18:36 -0500
+Processing by MoviesController#new as HTML
+  Rendering movies/new.html.erb within layouts/application
+  [1m[36mCinema Load (0.2ms)[0m  [1m[34mSELECT "cinemas".* FROM "cinemas"[0m
+  ↳ app/views/movies/_movie_form.html.erb:4
+  [1m[36mViewer Load (0.2ms)[0m  [1m[34mSELECT "viewers".* FROM "viewers"[0m
+  ↳ app/views/movies/_movie_form.html.erb:5
+  Rendered movies/_movie_form.html.erb (8.7ms)
+  Rendered movies/new.html.erb within layouts/application (12.0ms)
+Completed 200 OK in 76ms (Views: 72.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/movies/new" for 127.0.0.1 at 2019-02-04 21:18:38 -0500
+Processing by MoviesController#new as HTML
+  Rendering movies/new.html.erb within layouts/application
+  [1m[36mCinema Load (0.4ms)[0m  [1m[34mSELECT "cinemas".* FROM "cinemas"[0m
+  ↳ app/views/movies/_movie_form.html.erb:4
+  [1m[36mViewer Load (0.4ms)[0m  [1m[34mSELECT "viewers".* FROM "viewers"[0m
+  ↳ app/views/movies/_movie_form.html.erb:5
+  Rendered movies/_movie_form.html.erb (11.2ms)
+  Rendered movies/new.html.erb within layouts/application (16.2ms)
+Completed 200 OK in 70ms (Views: 64.5ms | ActiveRecord: 0.8ms)
+
+

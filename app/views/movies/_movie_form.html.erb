@@ -1,7 +1,7 @@
 <%= form_for @movie do |f| %>
   <%= f.label :title %>
   <%= f.text_field :title %>
-  Cinema: <%= f.collection_select :cinema_name, Cinema.all, :name, :name %>
-  Viewer: <%= f.collection_select :viewer_name, Viewer.all, :first_name, :first_name %>
+  Cinema: <%= f.collection_select(:cinema_name, Cinema.all, :id, :name, prompt: true)%>
+  Viewer: <%= f.collection_select(:viewer_name, Viewer.all, :id, :first_name, prompt: true)%>
   <%= f.submit %>
 <% end %> 
